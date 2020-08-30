@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>co.luminositylabs.oss.arquillian</groupId>
+        <artifactId>luminositylabs-arquillian</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <groupId>co.luminositylabs.oss.arquillian.selenium</groupId>
+    <artifactId>luminositylabs-selenium-bom</artifactId>
+    <packaging>pom</packaging>
+
+    <name>luminositylabs-selenium-bom</name>
+    <description>This POM serves as BOM (Bill of Materials) for managing core Selenium dependency versions</description>
+
+    <properties>
+        <dependency.htmlunit.version>2.43.0</dependency.htmlunit.version>
+        <dependency.selenium.version>3.141.59</dependency.selenium.version>
+        <dependency.selenium-htmlunit-driver.version>2.43.1</dependency.selenium-htmlunit-driver.version>
+        <dependency.selenium-phantomjs-driver.version>1.4.4</dependency.selenium-phantomjs-driver.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- Selenium Server -->
+            <dependency>
+                <groupId>org.seleniumhq.selenium</groupId>
+                <artifactId>selenium-server</artifactId>
+                <version>${dependency.selenium.version}</version>
+            </dependency>
+
+            <!-- Selenium dependencies -->
+            <dependency>
+                <groupId>org.seleniumhq.selenium</groupId>
+                <artifactId>selenium-api</artifactId>
+                <version>${dependency.selenium.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.seleniumhq.selenium</groupId>
+                <artifactId>selenium-java</artifactId>
+                <version>${dependency.selenium.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.seleniumhq.selenium</groupId>
+                <artifactId>selenium-support</artifactId>
+                <version>${dependency.selenium.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.seleniumhq.selenium</groupId>
+                <artifactId>selenium-leg-rc</artifactId>
+                <version>${dependency.selenium.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.seleniumhq.selenium</groupId>
+                <artifactId>lift</artifactId>
+                <version>${dependency.selenium.version}</version>
+            </dependency>
+
+            <!-- Drivers -->
+            <dependency>
+                <groupId>org.seleniumhq.selenium</groupId>
+                <artifactId>selenium-chrome-driver</artifactId>
+                <version>${dependency.selenium.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.seleniumhq.selenium</groupId>
+                <artifactId>selenium-firefox-driver</artifactId>
+                <version>${dependency.selenium.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.seleniumhq.selenium</groupId>
+                <artifactId>selenium-ie-driver</artifactId>
+                <version>${dependency.selenium.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.seleniumhq.selenium</groupId>
+                <artifactId>selenium-edge-driver</artifactId>
+                <version>${dependency.selenium.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.seleniumhq.selenium</groupId>
+                <artifactId>selenium-safari-driver</artifactId>
+                <version>${dependency.selenium.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.seleniumhq.selenium</groupId>
+                <artifactId>selenium-remote-driver</artifactId>
+                <version>${dependency.selenium.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.seleniumhq.selenium</groupId>
+                <artifactId>selenium-opera-driver</artifactId>
+                <version>${dependency.selenium.version}</version>
+            </dependency>
+
+            <!-- HtmlUnit is kept externally from Selenium BOM -->
+            <dependency>
+                <groupId>net.sourceforge.htmlunit</groupId>
+                <artifactId>htmlunit</artifactId>
+                <version>${dependency.htmlunit.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.seleniumhq.selenium</groupId>
+                <artifactId>htmlunit-driver</artifactId>
+                <version>${dependency.selenium-htmlunit-driver.version}</version>
+            </dependency>
+
+            <!-- Ghost Driver is kept externally from Selenium BOM -->
+            <dependency>
+                <groupId>com.codeborne</groupId>
+                <artifactId>phantomjsdriver</artifactId>
+                <version>${dependency.selenium-phantomjs-driver.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+</project>

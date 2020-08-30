@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>co.luminositylabs.oss.arquillian</groupId>
+        <artifactId>luminositylabs-arquillian</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <groupId>co.luminositylabs.oss.arquillian.cube</groupId>
+    <artifactId>luminositylabs-arquillian-cube</artifactId>
+
+    <name>luminositylabs-arquillian-cube</name>
+    <description>Customizations, extensions, patches, and utilities for use with Arquillian Cube</description>
+
+    <properties>
+        <checkstyle.skip>true</checkstyle.skip>
+        <!-- Dependency versions -->
+        <dependency.arquillian-cube.version>1.18.2</dependency.arquillian-cube.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.arquillian.cube</groupId>
+                <artifactId>arquillian-cube-bom</artifactId>
+                <version>${dependency.arquillian-cube.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.arquillian.cube</groupId>
+            <artifactId>arquillian-cube-docker</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>

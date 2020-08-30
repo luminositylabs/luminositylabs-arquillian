@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ Copyright (c) 2020 Luminosity Labs LLC. All rights reserved.
+
+ Licensed to the Apache Software Foundation (ASF) under one or more
+ contributor license agreements.  See the NOTICE file distributed with this
+ work for additional information regarding copyright ownership.  The ASF
+ licenses this file to you under the Apache License, Version 2.0
+ (the "License"); you may not use this file except in compliance with the
+ License.  You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+ License for the specific language governing permissions and limitations
+ under the License.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>co.luminositylabs.oss</groupId>
+        <artifactId>luminositylabs-oss-parent</artifactId>
+        <version>0.1.11</version>
+    </parent>
+
+    <groupId>co.luminositylabs.oss.arquillian</groupId>
+    <artifactId>luminositylabs-arquillian</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>luminositylabs-arquillian</name>
+    <description>Customizations, extensions, patches, and utilities for use with Arquillian</description>
+    <url>https://github.com/luminositylabs/luminositylabs-arquillian</url>
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Luminosity Labs Team</name>
+            <email>luminositylabs@gmail.com</email>
+            <organization>Luminosity Labs LLC</organization>
+            <organizationUrl>http://github.com/luminositylabs</organizationUrl>
+        </developer>
+    </developers>
+
+    <scm>
+        <url>http://bitbucket.com/luminositylabs/luminositylabs-arquillian</url>
+        <connection>scm:git:https://bitbucket.org/luminositylabs/luminositylabs-arquillian.git</connection>
+        <tag>HEAD</tag>
+    </scm>
+
+    <modules>
+        <module>luminositylabs-selenium-bom</module>
+        <module>luminositylabs-arquillian-cube</module>
+        <module>luminositylabs-arquillian-drone</module>
+    </modules>
+
+    <properties>
+        <!-- Dependency versions -->
+        <dependency.arquillian.version>1.6.0.Final</dependency.arquillian.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.jboss.arquillian</groupId>
+                <artifactId>arquillian-bom</artifactId>
+                <version>${dependency.arquillian.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <!-- pmd -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-pmd-plugin</artifactId>
+                    <configuration>
+                        <rulesets>
+                            <!--suppress UnresolvedMavenProperty -->
+                            <ruleset>file:///${multi.module.root}/pmd.xml</ruleset>
+                        </rulesets>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.commonjava.maven.plugins</groupId>
+                    <artifactId>directory-maven-plugin</artifactId>
+                    <executions>
+                        <execution>
+                            <id>multi-module-root-directory-build</id>
+                            <goals>
+                                <goal>directory-of</goal>
+                            </goals>
+                            <phase>validate</phase>
+                            <configuration>
+                                <property>multi.module.root</property>
+                                <project>
+                                    <groupId>co.luminositylabs.oss.arquillian</groupId>
+                                    <artifactId>luminositylabs-arquillian</artifactId>
+                                </project>
+                            </configuration>
+                        </execution>
+                        <execution>
+                            <id>multi-module-root-directory-site</id>
+                            <goals>
+                                <goal>directory-of</goal>
+                            </goals>
+                            <phase>pre-site</phase>
+                            <configuration>
+                                <property>multi.module.root</property>
+                                <project>
+                                    <groupId>co.luminositylabs.oss.arquillian</groupId>
+                                    <artifactId>luminositylabs-arquillian</artifactId>
+                                </project>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <!-- This plugin must be declared prior to any other plugins using the multi.module.root property -->
+                <groupId>org.commonjava.maven.plugins</groupId>
+                <artifactId>directory-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
