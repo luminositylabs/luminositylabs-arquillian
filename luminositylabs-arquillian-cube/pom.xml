@@ -16,6 +16,7 @@
 
     <properties>
         <checkstyle.skip>true</checkstyle.skip>
+        <pmd.skip>true</pmd.skip>
         <!-- Dependency versions -->
         <dependency.arquillian-cube.version>1.18.2</dependency.arquillian-cube.version>
     </properties>
@@ -36,6 +37,10 @@
         <dependency>
             <groupId>org.arquillian.cube</groupId>
             <artifactId>arquillian-cube-docker</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.arquillian.container</groupId>
+            <artifactId>arquillian-container-spi</artifactId>
         </dependency>
     </dependencies>
 
