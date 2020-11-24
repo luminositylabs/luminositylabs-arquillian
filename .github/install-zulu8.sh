@@ -20,3 +20,4 @@ export PATH=$JAVA_HOME/bin:$PATH
 java -version
 
 set +euf
+
