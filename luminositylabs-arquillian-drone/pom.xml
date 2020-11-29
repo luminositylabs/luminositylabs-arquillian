@@ -5,7 +5,7 @@
     <parent>
         <groupId>co.luminositylabs.oss.arquillian</groupId>
         <artifactId>luminositylabs-arquillian</artifactId>
-        <version>0.1.3-SNAPSHOT</version>
+        <version>0.1.3</version>
     </parent>
 
     <groupId>co.luminositylabs.oss.arquillian.drone</groupId>
@@ -21,7 +21,7 @@
         <!-- Dependency versions -->
         <dependency.arquillian-drone.version>2.5.1</dependency.arquillian-drone.version>
         <dependency.gson.version>2.8.6</dependency.gson.version>
-        <dependency.luminositylabs-selenium-bom.version>0.1.3-SNAPSHOT</dependency.luminositylabs-selenium-bom.version>
+        <dependency.luminositylabs-selenium-bom.version>0.1.3</dependency.luminositylabs-selenium-bom.version>
     </properties>
 
     <dependencyManagement>
