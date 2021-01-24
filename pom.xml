@@ -21,12 +21,12 @@
     <parent>
         <groupId>co.luminositylabs.oss</groupId>
         <artifactId>luminositylabs-oss-parent</artifactId>
-        <version>0.1.19</version>
+        <version>0.1.20</version>
     </parent>
 
     <groupId>co.luminositylabs.oss.arquillian</groupId>
     <artifactId>luminositylabs-arquillian</artifactId>
-    <version>0.1.4-SNAPSHOT</version>
+    <version>0.1.5-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>luminositylabs-arquillian</name>
