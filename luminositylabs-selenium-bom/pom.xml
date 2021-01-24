@@ -18,7 +18,7 @@
     <properties>
         <dependency.htmlunit.version>2.46.0</dependency.htmlunit.version>
         <dependency.selenium.version>3.141.59</dependency.selenium.version>
-        <dependency.selenium-htmlunit-driver.version>2.45.0</dependency.selenium-htmlunit-driver.version>
+        <dependency.selenium-htmlunit-driver.version>2.46.0</dependency.selenium-htmlunit-driver.version>
         <dependency.selenium-phantomjs-driver.version>1.4.4</dependency.selenium-phantomjs-driver.version>
     </properties>
 
