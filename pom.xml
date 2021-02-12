@@ -26,7 +26,7 @@
 
     <groupId>co.luminositylabs.oss.arquillian</groupId>
     <artifactId>luminositylabs-arquillian</artifactId>
-    <version>0.1.6-SNAPSHOT</version>
+    <version>0.1.6</version>
     <packaging>pom</packaging>
 
     <name>luminositylabs-arquillian</name>
@@ -52,7 +52,7 @@
     <scm>
         <url>http://bitbucket.com/luminositylabs/luminositylabs-arquillian</url>
         <connection>scm:git:https://bitbucket.org/luminositylabs/luminositylabs-arquillian.git</connection>
-        <tag>HEAD</tag>
+        <tag>luminositylabs-arquillian-0.1.6</tag>
     </scm>
 
     <modules>
