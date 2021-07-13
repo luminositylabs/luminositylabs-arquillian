@@ -21,7 +21,7 @@
     <parent>
         <groupId>co.luminositylabs.oss</groupId>
         <artifactId>luminositylabs-oss-parent</artifactId>
-        <version>0.1.25</version>
+        <version>0.2.0</version>
     </parent>
 
     <groupId>co.luminositylabs.oss.arquillian</groupId>
@@ -62,7 +62,6 @@
     </modules>
 
     <properties>
-        <spotbugs.skip>true</spotbugs.skip> <!-- skip this for now until <artifactId>spotbugs-annotations</artifactId> is incorporated  -->
         <!-- Dependency versions -->
         <dependency.arquillian.version>1.6.0.Final</dependency.arquillian.version>
     </properties>
