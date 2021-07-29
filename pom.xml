@@ -51,7 +51,7 @@
 
     <scm>
         <url>http://bitbucket.com/luminositylabs/luminositylabs-arquillian</url>
-        <connection>scm:git:https://bitbucket.org/luminositylabs/luminositylabs-arquillian.git</connection>
+        <connection>scm:git:https://github.com/luminositylabs/luminositylabs-arquillian.git</connection>
         <tag>HEAD</tag>
     </scm>
 
