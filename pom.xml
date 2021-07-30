@@ -21,7 +21,7 @@
     <parent>
         <groupId>co.luminositylabs.oss</groupId>
         <artifactId>luminositylabs-oss-parent</artifactId>
-        <version>0.2.0</version>
+        <version>0.2.1</version>
     </parent>
 
     <groupId>co.luminositylabs.oss.arquillian</groupId>
@@ -51,7 +51,7 @@
 
     <scm>
         <url>http://bitbucket.com/luminositylabs/luminositylabs-arquillian</url>
-        <connection>scm:git:https://bitbucket.org/luminositylabs/luminositylabs-arquillian.git</connection>
+        <connection>scm:git:https://github.com/luminositylabs/luminositylabs-arquillian.git</connection>
         <tag>HEAD</tag>
     </scm>
 
