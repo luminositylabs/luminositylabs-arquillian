@@ -103,6 +103,11 @@
                 <ignoreVersion type="regex">.*</ignoreVersion>
             </ignoreVersions>
         </rule>
+        <rule groupId="org.eclipse.sisu" artifactId="org.eclipse.sisu" comparisonMethod="maven">
+            <ignoreVersions>
+                <ignoreVersion type="regex">.*</ignoreVersion>
+            </ignoreVersions>
+        </rule>
         <rule groupId="org.fusesource.jansi" artifactId="jansi" comparisonMethod="maven">
             <ignoreVersions>
                 <ignoreVersion type="regex">.*</ignoreVersion>
@@ -138,7 +143,7 @@
              referenced from arquillian-bom v1.6.0.Final -->
         <rule groupId="ch.qos.logback" artifactId="logback-classic" comparisonMethod="maven">
             <ignoreVersions>
-                <ignoreVersion type="regex">1\.2\.[1-5]</ignoreVersion>
+                <ignoreVersion type="regex">1\.2\.[1-6]</ignoreVersion>
                 <ignoreVersion type="regex">.*-groovyless</ignoreVersion>
             </ignoreVersions>
         </rule>
