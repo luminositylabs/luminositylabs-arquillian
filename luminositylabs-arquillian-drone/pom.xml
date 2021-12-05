@@ -19,8 +19,8 @@
         <pmd.skip>true</pmd.skip>
         <spotbugs.skip>true</spotbugs.skip>
         <!-- Dependency versions -->
-        <dependency.arquillian-drone.version>2.5.2</dependency.arquillian-drone.version>
-        <dependency.gson.version>2.8.8</dependency.gson.version>
+        <dependency.arquillian-drone.version>2.5.4</dependency.arquillian-drone.version>
+        <dependency.gson.version>2.8.9</dependency.gson.version>
         <dependency.luminositylabs-selenium-bom.version>0.1.10-SNAPSHOT</dependency.luminositylabs-selenium-bom.version>
     </properties>
 

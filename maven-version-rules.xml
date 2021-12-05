@@ -143,7 +143,7 @@
              referenced from arquillian-bom v1.6.0.Final -->
         <rule groupId="ch.qos.logback" artifactId="logback-classic" comparisonMethod="maven">
             <ignoreVersions>
-                <ignoreVersion type="regex">1\.2\.[1-6]</ignoreVersion>
+                <ignoreVersion type="regex">1\.2\.[1-7]</ignoreVersion>
                 <ignoreVersion type="regex">.*-groovyless</ignoreVersion>
             </ignoreVersions>
         </rule>
@@ -152,6 +152,11 @@
         <rule groupId="org.seleniumhq.selenium" comparisonMethod="maven">
             <ignoreVersions>
                 <ignoreVersion type="regex">4\..*</ignoreVersion>
+            </ignoreVersions>
+        </rule>
+        <rule groupId="org.seleniumhq.selenium" artifactId="htmlunit-driver" comparisonMethod="maven">
+            <ignoreVersions>
+                <ignoreVersion type="regex">3\..*</ignoreVersion>
             </ignoreVersions>
         </rule>
 
@@ -167,6 +172,14 @@
         <rule groupId="org.testng" artifactId="testng" comparisonMethod="maven">
             <ignoreVersions>
                 <ignoreVersion type="regex">7\..*</ignoreVersion>
+            </ignoreVersions>
+        </rule>
+
+        <!-- Ignore other dependencies with newer versions that are not explicitly defined
+             as a dependency in this project. -->
+        <rule groupId="commons-cli" artifactId="commons-cli" comparisonMethod="maven">
+            <ignoreVersions>
+                <ignoreVersion type="regex">.*</ignoreVersion>
             </ignoreVersions>
         </rule>
     </rules>
