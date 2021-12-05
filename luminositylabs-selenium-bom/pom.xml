@@ -16,11 +16,11 @@
     <description>This POM serves as BOM (Bill of Materials) for managing core Selenium dependency versions</description>
 
     <properties>
-        <dependency.htmlunit.version>2.54.0</dependency.htmlunit.version>
+        <dependency.htmlunit.version>2.55.0</dependency.htmlunit.version>
         <dependency.selenium.version>3.141.59</dependency.selenium.version>
         <!--<dependency.selenium.version>4.0.0</dependency.selenium.version>-->
-        <dependency.selenium-htmlunit-driver.version>2.54.0</dependency.selenium-htmlunit-driver.version>
-        <dependency.selenium-phantomjs-driver.version>1.4.4</dependency.selenium-phantomjs-driver.version>
+        <dependency.selenium-htmlunit-driver.version>2.55.0</dependency.selenium-htmlunit-driver.version>
+        <dependency.selenium-phantomjs-driver.version>1.5.0</dependency.selenium-phantomjs-driver.version>
     </properties>
 
     <dependencyManagement>
